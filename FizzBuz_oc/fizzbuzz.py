@@ -53,6 +53,7 @@ class FizzBuzz(object):
                 return r.say(x)
 
 
-fb = FizzBuzz([FizzBuzzRule(), FizzRule(), BuzzRule(), WookRule(),  NormalRule()])
+rules = [FizzBuzzRule(), FizzRule(), BuzzRule(), WookRule(),  NormalRule()]
+fb = FizzBuzz(rules)
 for i in range(11):
     print fb.say(i)
