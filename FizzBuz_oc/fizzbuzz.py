@@ -1,15 +1,23 @@
 #! /usr/bin/env python
 
+class FizzBuzz(object):
+
+    def isFizz(self, x):
+        return not (x % 3)
+
+    def isBuzz(self, x):
+        return not (x % 5)
+
+    def say(self, x):
+        if self.isFizz(x) and self.isBuzz(x):
+            return 'FizzBuzz'
+        elif self.isFizz(x):
+            return 'Fizz'
+        elif self.isBuzz(x):
+            return 'Buzz'
+        else:
+            return x
+
+fb = FizzBuzz()
 for i in range(101):
-    is3 = not(i % 3)
-    is5 = not(i % 5)
-    if is3 and is5:
-        print 'FizzBuzz'
-        continue
-    if is3:
-        print 'Fizz'
-        continue
-    if is5:
-        print 'Buzz'
-        continue
-    print i
+    print fb.say(i)
