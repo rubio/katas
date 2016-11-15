@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-for i in range(100):
+for i in range(101):
     is3 = not(i % 3)
     is5 = not(i % 5)
     if is3 and is5:
